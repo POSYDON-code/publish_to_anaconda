@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: publish-to-conda
-      uses: scottcoughlin2014/publish_conda_package_action@v1.0.0-beta
+      uses: POSYDON-code/publish_to_anaconda@v1.0.1
       with:
         # CondaDir: locate the directory containing your meta.yml, conda_build_config.yaml (...) files
         CondaDir: 'conda'
