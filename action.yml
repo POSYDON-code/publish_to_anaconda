@@ -1,0 +1,28 @@
+name: 'Publish POSYDON conda package'
+description: 'Publish conda package'
+author: 'amauryval'
+branding:
+  icon: 'package'  
+  color: 'blue'
+inputs: 
+  CondaDir:
+    description: 'directory containing your meta.yml file'
+    default: 'conda'
+  Channels:
+    description: 'Channels to use'
+    default: 'conda-forge'
+  Platforms: 
+    description: 'input plaftorms'
+    default: 'noarch'
+  CondaUsername:
+    description: 'conda Username'
+    required: true
+  CondaPassword:
+    description: 'conda Password'
+    required: true
+  CondaChannel:
+    description: 'conda Channel to upload to'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
